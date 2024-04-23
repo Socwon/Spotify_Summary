@@ -1,0 +1,40 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+
+# 한글 폰트 설정
+font_path = "C:/Windows/Fonts/malgun.ttf"  # 한글 폰트 파일 경로
+font_prop = FontProperties(fname=font_path)
+
+# 데이터셋 로드
+data = pd.read_csv("spotify_millsongdata.csv", header=None)
+
+# 가사가 끝나면 "-" 표시를 추가
+data.iloc[:, 1] = data.iloc[:, 1] + '-'
+
+# 아티스트별로 노래 수 세기
+artist_song_count = data[0].value_counts()
+
+# 상위 15명과 하위 15명 추출
+top_15_artists = artist_song_count.head(15)
+bottom_15_artists = artist_song_count.tail(15)
+
+# 상위 15명의 아티스트별 노래 수를 막대 그래프로 시각화
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+top_15_artists.plot(kind='bar', color='skyblue')
+plt.title('상위 15명의 아티스트들의 노래 수', fontproperties=font_prop)
+plt.xlabel('아티스트', fontproperties=font_prop)
+plt.ylabel('노래 수', fontproperties=font_prop)
+plt.xticks(rotation=45, ha='right', fontproperties=font_prop)
+
+# 하위 15명의 아티스트별 노래 수를 막대 그래프로 시각화
+plt.subplot(1, 2, 2)
+bottom_15_artists.plot(kind='bar', color='salmon')
+plt.title('하위 15명의 아티스트들의 노래 수', fontproperties=font_prop)
+plt.xlabel('아티스트', fontproperties=font_prop)
+plt.ylabel('노래 수', fontproperties=font_prop)
+plt.xticks(rotation=45, ha='right', fontproperties=font_prop)
+
+plt.tight_layout()
+plt.show()
