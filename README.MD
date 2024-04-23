@@ -38,6 +38,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/9b8f5cbe-4de5-487b-8377-21618e0fa9df"/>
 
 제일 많이 등장한 키워드는 순서대로 "Love", "Time", "One", "Heart", "I'm" 이다.
+따라서 사랑, 시간에 관련된 주제의 노래가 많이 발표된다는 것을 알 수 있다.
 
 ### 2.3 추출한 데이터에 대한 탐색적 데이터 분석
 1~5점 척도인 경우에는 분포
