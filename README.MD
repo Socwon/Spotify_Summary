@@ -27,7 +27,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 데이터는 57494건이 있다.
 
 ### 2.2 추출한 데이터
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/5cfbe003-b3e9-456b-aa78-236b84484a94"/>
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/107210c5-f925-498e-a112-25f3f276ecd2"/>
 
 
 ### 2.3 추출한 데이터에 대한 탐색적 데이터 분석
