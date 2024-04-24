@@ -1,1 +1,29 @@
+import pandas as pd
+from collections import Counter
+import nltk
+from nltk.corpus import stopwords
 
+# NLTK의 불용어 다운로드
+nltk.download('stopwords')
+
+# 데이터셋 로드
+data = pd.read_csv("spotify_millsongdata.csv", header=None)
+
+# 가사에서 모든 단어 추출
+all_words = ' '.join(data[1]).split()
+
+# NLTK의 영어 불용어 로드
+english_stopwords = set(stopwords.words('english'))
+
+# 불용어를 제외한 단어 추출
+filtered_words = [word for word in all_words if word.lower() not in english_stopwords]
+
+# 단어별 빈도수 계산
+word_count = Counter(filtered_words)
+
+# 상위 5개의 단어 추출
+top_words = word_count.most_common(5)
+
+# 상위 5개의 단어와 해당 단어의 빈도수 출력
+for word, count in top_words:
+    print(f"{word}: {count}회")
