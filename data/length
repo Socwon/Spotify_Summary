@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib import font_manager
+
+# 데이터셋 로드
+data = pd.read_csv("spotify_millsongdata.csv")
+
+# 가사 길이 계산
+data['lyrics_length'] = data['text'].apply(lambda x: len(str(x).split()))
+
+# 한글 폰트 설정
+font_path = "C:/Windows/Fonts/malgun.ttf"  # 한글 폰트 파일 경로
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+plt.rc('font', family=font_name)
+
+# 가사 길이 분포 시각화
+plt.figure(figsize=(10, 6))
+plt.hist(data['lyrics_length'], bins=50, color='skyblue', edgecolor='black')
+plt.title('가사 길이 분포')
+plt.xlabel('가사 길이')
+plt.ylabel('노래')
+plt.grid(True)
+plt.show()
