@@ -23,8 +23,6 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 |-------|-----|-------|-------|
 |아티스트 이름|노래 제목| 노래 링크 | 노래 가사 |
 
-가사 데이터는  57494건이
-
 - 활용할 데이터 예시
 
 | artist | song | link  | text  |
@@ -33,6 +31,8 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | Aerosmith | The Hand That Feeds | /a/aerosmith/the+hand+that+feeds_20004218.html  | Doctor, doctor, doctor Please, doctor, doctor, please Doctor, doctor, doctor Feel like a ol...  |
 | Arlo Guthrie | The Streets Of Laredo | /a/arlo+guthrie/streets+of+laredo_20328407.html  | As I walked out in the streets of Laredo As I walked out in Laredo one day I spied a poor cowb...  |
 | Barbra Streisand | I Won't Last A Day Without You | /b/barbra+streisand/i+wont+last+a+day+without+you_20699679.html  | Day after day I must face a world of strangers Where I don't belong, I'm not that strong It's ...  |
+
+아티스트 데이터는 643건, 노래 데이터는 44824건, 가사 데이터는 57494건이 있다.
 
 
 ### 2.2 추출한 데이터
