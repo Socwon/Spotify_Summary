@@ -54,6 +54,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/318475fc-1f52-4102-ba87-03f0a6cfdce3"/>
 
 - 모든 노래의 가사 길이 시각화
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/a0cc12b0-4f2f-48e3-aad2-36b7a8677f26"/>
 
 
 
