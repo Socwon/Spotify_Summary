@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=Spotify%20Summary💊&fontSize=90)<br/>
+![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=Spotify%10Summary💊&fontSize=90)<br/>
 ## MobileBERT를 활용한 노래 가사 요약 프로젝트  
 <!-- 
 badge icon 참고 사이트
