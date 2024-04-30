@@ -1,6 +1,6 @@
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1"/>
 
-## MobileBERT를 활용한 노래 제목 예 프로젝트  
+## MobileBERT를 활용한 노래 제목 예측 프로젝트  
 <!-- 
 badge icon 참고 사이트
 https://github.com/danmadeira/simple-icon-badges
