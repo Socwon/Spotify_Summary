@@ -14,7 +14,7 @@ https://github.com/danmadeira/simple-icon-badges
 (출처 : https://soundfly.com/courses/intro-to-scoring-for-film-and-tv?utm_source=Flypaper&utm_campaign=Flypaper-ad-system&utm_medium=sidebar-ad)
 
 ### 1.2 문제 정의
-Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이름, 아티스트 이름, 노래 링크 및 가사가 포함 되어 있는 데이터셋이다. 노래 추천, 노래 분류 등에 사용할 수 있으며 이 프로젝트에서는 대부분의 사람들이 즐겨 듣는 노래는 어떤 내용의 가사가 담겨져 있는지 요약된 가사를 생성하는 인공지능 모델을 개발하고자 한다.
+Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이름, 아티스트 이름, 노래 링크 및 가사가 포함 되어 있는 데이터셋이다. 노래 추천, 노래 분류 등에 사용할 수 있으며 이 프로젝트에서는 대부분의 사람들이 즐겨 듣는 노래는 어떤 내용의 가사가 담겨져 있으며 이에 따른 제목이 무엇인지 예측하는 인공지능 모델을 개발하고자 한다.
 
 ## 2. 데이터
 ### 2.1 원시 데이터
