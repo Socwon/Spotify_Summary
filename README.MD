@@ -1,6 +1,6 @@
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1"/>
 
-## MobileBERT를 활용한 노래 가사 요약 프로젝트  
+## MobileBERT를 활용한 노래 제목 예 프로젝트  
 <!-- 
 badge icon 참고 사이트
 https://github.com/danmadeira/simple-icon-badges
@@ -34,7 +34,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | Arlo Guthrie | The Streets Of Laredo | /a/arlo+guthrie/streets+of+laredo_20328407.html  | As I walked out in the streets of Laredo As I walked out in Laredo one day I spied a poor cowb...  |
 | Barbra Streisand | I Won't Last A Day Without You | /b/barbra+streisand/i+wont+last+a+day+without+you_20699679.html  | Day after day I must face a world of strangers Where I don't belong, I'm not that strong It's ...  |
 
-아티스트 데이터는 643건, 노래 데이터는 44824건, 가사 데이터는 57494건이 있다.
+데이터는 총 57494건이 있다.
 
 
 ### 2.2 추출한 데이터
