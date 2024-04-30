@@ -1,3 +1,5 @@
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1/>
+
 
 ## MobileBERT를 활용한 노래 가사 요약 프로젝트  
 <!-- 
