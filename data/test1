@@ -1,0 +1,43 @@
+import csv
+import random
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# 학습 데이터 파일 경로
+csv_file = 'spotify_millsongdata.csv'
+
+# CSV 파일에서 데이터를 읽어오는 함수
+def read_csv(file):
+    data = []
+    with open(file, 'r', newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            data.append({'title': row['song'], 'lyrics': row['text']})
+    return data
+
+# 데이터 로드
+song_data = read_csv(csv_file)
+
+# 랜덤하게 3000개의 샘플 추출
+random_sample = random.sample(song_data, 3000)
+
+# 가사만 따로 추출하여 리스트에 저장
+lyrics_list = [song['lyrics'] for song in random_sample]
+
+# CountVectorizer를 사용하여 가사를 벡터화
+vectorizer = CountVectorizer()
+vectorized_lyrics = vectorizer.fit_transform(lyrics_list)
+
+# 입력된 가사와 가장 유사한 노래 제목을 반환하는 함수
+def get_song_title(query_lyrics, random_sample, vectorizer, vectorized_lyrics):
+    query_vector = vectorizer.transform([query_lyrics])
+    cosine_similarities = cosine_similarity(vectorized_lyrics, query_vector)
+    most_similar_song_index = cosine_similarities.argmax()
+    return random_sample[most_similar_song_index]['title']
+
+# 가사 입력 받기
+query_lyrics = input("가사를 입력하세요: ")
+
+# 가장 유사한 노래 제목 출력
+predicted_song_title = get_song_title(query_lyrics, random_sample, vectorizer, vectorized_lyrics)
+print("입력한 가사와 유사한 노래 제목은:", predicted_song_title)
