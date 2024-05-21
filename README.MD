@@ -41,7 +41,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 
 ### 2.2 추출한 데이터
 - 노래를 가장 많이 낸 아티스트 15명과 노래를 가장 적게 낸 아티스트 15명
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/d45fb3e6-8d97-429c-b428-2c11cf36686d"/>
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/d45fb3e6-8d97-429c-b428-2c11cf36686d" width="300" height="300"/>
 
 제일 노래를 많이 낸 아티스트는 'Donna Summer'이며 노래는 191개이고 제일 노래를 적게 낸 아티스트는 5명이며 노래는 1개씩 냈다.
 
