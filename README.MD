@@ -1,4 +1,4 @@
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1" width="700" height="500"/>
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1" width="500" height="200"/>
 
 ## MobileBERT를 활용한 노래 제목 예측 프로젝트  
 <!-- 
