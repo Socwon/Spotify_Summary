@@ -1,13 +1,11 @@
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1" width="700" height="200"/>
 
 ## BERT를 활용한 노래 제목 예측 프로젝트  
-<!-- 
-badge icon 참고 사이트
-https://github.com/danmadeira/simple-icon-badges
--->
+<div>
 <img src="https://img.shields.io/badge/python-%233776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/> 
 <img src="https://img.shields.io/badge/pytorch-%23EE4C2C.svg?&style=for-the-badge&logo=pytorch&logoColor=white"/> 
 <img src="https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white"/>
+</div>
 
 ## 1. 개 요 
 ### 1.1 노래 제목의 영향력
