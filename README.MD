@@ -77,7 +77,8 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 - 기타 설정: 로그 기록, 평가 전략은 epoch 단위 등의 설정을 적용했다.
 
 ## 4. BERT 학습 결과
-개발환경 
+#### 개발환경  
+
 <img src="https://img.shields.io/badge/python-%233776AB.svg?&style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/pytorch-%23EE4C2C.svg?&style=for-the-badge&logo=pytorch&logoColor=white" /> <img src="https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white" />
 
 BERT 모델을 활용하여 가사 기반의 노래 제목 예측 학습을 진행했다. 미리 훈련된 BERT 모델을 사용했으며, 학습 데이터는 전처리된 가사와 해당 가사에 대응하는 노래 제목을 매핑한 데이터로 구성되었다. Google의 BERT 모델을 기반으로 학습을 진행하며, GPU 가속을 활용하여 학습 성능을 향상시켰다.
