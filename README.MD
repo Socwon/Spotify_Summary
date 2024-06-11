@@ -67,14 +67,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/456956d5-e46b-4f8c-b3d1-609d1b9bb4d4"/>
 
 ### 3.1 학습 설정
-- 모델: BERT (Bidirectional Encoder Representations from Transformers)
-- 미세 조정: 특정 가사에 대응하는 노래 제목을 예측하기 위해 BERT 모델을 미세 조정했다.
-- 하이퍼파라미터:
-  - 학습률: 2e-5
-  - 배치 크기: 8
-  - 학습 에포크: 3
-  - 가중치 감소: 0.01
-- 기타 설정: 로그 기록, 평가 전략은 epoch 단위 등의 설정을 적용했다.
+
 
 ## 4. BERT 학습 결과
 #### 개발환경  
@@ -90,16 +83,12 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 <img src="https://img.shields.io/badge/torch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 </div>
 
-BERT 모델을 활용하여 가사 기반의 노래 제목 예측 학습을 진행했다. 미리 훈련된 BERT 모델을 사용했으며, 학습 데이터는 전처리된 가사와 해당 가사에 대응하는 노래 제목을 매핑한 데이터로 구성되었다. Google의 BERT 모델을 기반으로 학습을 진행하며, GPU 가속을 활용하여 학습 성능을 향상시켰다.
+
 
 ### 4.1 결과
-학습된 BERT 모델은 학습 데이터에서 노래 제목 예측을 수행하였으며, 다음과 같은 결과를 얻었다.
-- 학습 손실: 평균 손실은 0.3으로, 학습 과정에서 모델의 성능을 모니터링
-- 검증 정확도: 학습된 모델은 검증 데이터에서 약 85%의 정확도
+
 
 ### 4.2 모델 평가
-테스트 데이터에서 모델을 평가하였으며, 다음과 같은 결과를 얻었다.
-- 테스트 정확도: BERT 모델은 테스트 데이터에서 약 82%의 정확도
-- 추론 속도: 모델은 입력 가사에 대해 빠르게 예측을 수행하였으며, 추론 시간은 평균 0.1초 이내
+
 
 ## 5. 느낀점 및 배운점
