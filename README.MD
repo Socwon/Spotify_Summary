@@ -69,7 +69,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 ### 3.1 학습 설정
 
 
-## 4. BERT 학습 결과
+## 4. T5 학습 결과
 #### 개발환경  
 <div>
 <img src="https://img.shields.io/badge/python-%233776AB.svg?&style=for-the-badge&logo=python&logoColor=white" /> 
