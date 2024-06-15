@@ -32,9 +32,10 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | artist | song | link  | text  |
 |-------|-----|-------|-------|
 |Alison Krauss|Maybe| /a/alison+krauss/maybe_20006156.html | Yesterday the odds were stacked In favor of my expectations Flyin' above the rest, Never fa... |
-| Aerosmith | The Hand That Feeds | /a/aerosmith/the+hand+that+feeds_20004218.html  | Doctor, doctor, doctor Please, doctor, doctor, please Doctor, doctor, doctor Feel like a ol...  |
-| Arlo Guthrie | The Streets Of Laredo | /a/arlo+guthrie/streets+of+laredo_20328407.html  | As I walked out in the streets of Laredo As I walked out in Laredo one day I spied a poor cowb...  |
-| Barbra Streisand | I Won't Last A Day Without You | /b/barbra+streisand/i+wont+last+a+day+without+you_20699679.html  | Day after day I must face a world of strangers Where I don't belong, I'm not that strong It's ...  |
+| Aerosmith | The Hand That Feeds | /z/zz+top/36+22+36_20149356.html  | Doctor, doctor, doctor Please, doctor, doctor, please Doctor, doctor, doctor Feel like a ol...  |
+| .. | .. | ...  | ...  |
+| ZZ Top | 36-22-36 | /b/barbra+streisand/i+wont+last+a+day+without+you_20699679.html  | What, what, what you want? Hey My thing is a real fine thing It's a thing, it's a real fine th...  |
+| ZZ Top | 2000 Blues | /z/zz+top/2000+blues_10198797.html  | A hundred thousand dollars Wouldn't touch the price I paid Of the hundred thousand moments ...  |
 
 데이터는 총 57494건이 있다.
 
