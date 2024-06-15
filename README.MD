@@ -72,7 +72,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 </div>
 <br>
 
-### 3.1 학습 데이터와 분석 데이터
+### 3.1 학습 데이터와 테스트 데이터
 | artist | summary | text  | 
 |-------|-----|-------|
 |Unwritten Law|Genocide| Well who are you what do you know And I guess it only goes to show Don't think you're ready for the fall Do you think you really wanta play.. |
@@ -81,8 +81,11 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | John Denver | Downhill Stuff | Blue river blues I'd rather be outside Here I am inside Watching it rain Blue river blues I'd rather be somewhere.. | 
 | Judy Garland | Why Was I Born? | Why was I born? Why am I livin'? What do I get? What am I givin'? Why do I want a thing I.. | 
 
-원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 만들었다.
-그 후 원본 데이터셋을 위와 같은 조건으로 5000개의 데이터를 랜덤으로 추출하여 학습된 요약 모델을 적용시켰다.
+데이터셋을 학습 데이터와 테스트 데이터로 분할하였다.
+원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 새로운 데이터셋을 만들었고, 각 가사를 입력으로 받고, 해당하는 제목을 목표 출력으로 설정하여 모델을 학습하였다.
+
+### 3.2 모델 학습
+사전 학습된 T5 모델을 사용하여 가사를 입력으로 받아 제목을 생성하는 Seq2Seq 학습을 수행하였고 모델은 최적화된 학습 파라미터와 함께 데이터셋을 반복하여 학습하였습니다.
 
 
 
