@@ -71,7 +71,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 </div>
 <br>
 
-
+### 3.1 학습 데이터와 분석 데이터
 | artist | summary | text  | 
 |-------|-----|-------|
 |Unwritten Law|Genocide| Well who are you what do you know And I guess it only goes to show Don't think you're ready for the fall Do you think you really wanta play.. |
@@ -81,6 +81,8 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | Judy Garland | Why Was I Born? | Why was I born? Why am I livin'? What do I get? What am I givin'? Why do I want a thing I.. | 
 
 원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 만들었다.
+그 후 원본 데이터셋을 위와 같은 조건으로 5000개의 데이터를 랜덤으로 추출하여 학습된 요약 모델을 적용시켰다.
+
 
 
 ## 4. T5 학습 결과
