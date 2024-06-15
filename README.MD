@@ -80,7 +80,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 | John Denver | Downhill Stuff | Blue river blues I'd rather be outside Here I am inside Watching it rain Blue river blues I'd rather be somewhere.. | 
 | Judy Garland | Why Was I Born? | Why was I born? Why am I livin'? What do I get? What am I givin'? Why do I want a thing I.. | 
 
-원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 생성하였다.
+원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 만들었다.
 
 
 ## 4. T5 학습 결과
