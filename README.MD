@@ -70,13 +70,6 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 
 
 ## 4. T5 학습 결과
-#### 개발환경  
-<div>
-<img src="https://img.shields.io/badge/python-%233776AB.svg?&style=for-the-badge&logo=python&logoColor=white" /> 
-<img src="https://img.shields.io/badge/pytorch-%23EE4C2C.svg?&style=for-the-badge&logo=pytorch&logoColor=white" /> 
-<img src="https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white" />
-</div>
-
 #### 패키지
 <div>
 <img src="https://img.shields.io/badge/transformers-409FFF?style=flat-square&logo=transformers&logoColor=white"/>
