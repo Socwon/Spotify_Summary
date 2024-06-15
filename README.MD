@@ -1,6 +1,6 @@
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13b559d7-7593-4f7b-832e-623fb1ee88b1" width="700" height="200"/>
 
-## T5를 활용한 노래 가사 요약 프로젝트  
+## T5를 활용한 노래 제목 예측 프로젝트  
 <div>
 <img src="https://img.shields.io/badge/python-%233776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/> 
 <img src="https://img.shields.io/badge/pytorch-%23EE4C2C.svg?&style=for-the-badge&logo=pytorch&logoColor=white"/> 
@@ -8,7 +8,7 @@
 </div>
 
 ## 1. 개 요 
-### 1.1 노래 가사의 영향력
+### 1.1 노래 제목의 영향력
 노래 제목은 노래의 핵심을 나타내며, 듣는 이들에게 노래의 주제나 감정을 전달하는 역할을 한다. 노래 제목은 노래를 소개하고, 청취자의 관심을 끌고, 노래의 주제나 감정을 전달하는 역할을 한다. 대중적인 장르의 경우 노래의 의미가 명확해지는 것이 중요하며, 노래 제목은 노래 전체에서 가장 기억에 남는 부분이어야 하므로 명확성이 중요하다. 이는 노래의 인기와 성공에 영향을 미치는 요소 중 하나이며 또한 마케팅적으로도 중요하고, 청취자의 호기심을 자극하여 노래를 들을 가능성을 높일 수 있다. 따라서 노래 제목을 의도적으로 선택하는 것이 중요하다.
 
 (출처 : https://soundfly.com/courses/intro-to-scoring-for-film-and-tv?utm_source=Flypaper&utm_campaign=Flypaper-ad-system&utm_medium=sidebar-ad)
