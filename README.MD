@@ -91,7 +91,7 @@ T5 모델은 텍스트를 입력받아 텍스트를 생성하는 다양한 작�
 ### 4.1 결과
 사전 훈련된 T5 모델을 사용하여 노래 가사를 기반으로 제목을 생성하도록 미세 조정을 수행했다.
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/f63abc24-fa1e-4ad4-abb2-1a51eaad9e73" width="800" height="250"/>
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/9a3b6100-0347-4419-a75c-163f3d5d6496" width="700" height="250"/>
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/9a3b6100-0347-4419-a75c-163f3d5d6496" width="800" height="250"/>
 
 ### 4.2 모델 평가
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34"/>
