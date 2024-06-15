@@ -95,6 +95,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/f63abc24-fa1e-4ad4-abb2-1a51eaad9e73" width="800" height="250"/>
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13279650-a668-491b-b9a6-99e6dbb8c95e" width="800" height="250"/>
+
 학습 손실이 2.3077인 반면, 평가 손실은 1.6959로 나타났으며 모델이 학습 데이터에 비해 분석 데이터에서 더 나은 성능을 보였다.
 ROUGE-1, ROUGE-2, ROUGE-L, ROUGE-Lsum 점수를 사용하여 ROUGE-1 점수는 0.4233, ROUGE-2 점수는 0.2993, ROUGE-L 점수는 0.424, ROUGE-Lsum 점수는 0.4256으로, 모델이 입력된 노래 가사에서 비교적 일관성 있게 제목을 생성하는 능력을 보여주었다.
 생성된 제목의 평균 길이는 5.6119 단어로, 대부분의 제목이 6단어 이하로 생성되었다.
