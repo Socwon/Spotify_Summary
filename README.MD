@@ -71,12 +71,13 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 </div>
 
 전체 데이터셋에서 3000개의 샘플을 랜덤으로 추출하여 만들었다.
+
 | artist | summary | text  | 
-|-------|-----|-------|-------|
-|Alison Krauss|Maybe| /a/alison+krauss/maybe_20006156.html | Yesterday the odds were stacked In favor of my expectations Flyin' above the rest, Never fa... |
-| Aerosmith | The Hand That Feeds | /a/aerosmith/the+hand+that+feeds_20004218.html  | Doctor, doctor, doctor Please, doctor, doctor, please Doctor, doctor, doctor Feel like a ol...  |
-| Arlo Guthrie | The Streets Of Laredo | /a/arlo+guthrie/streets+of+laredo_20328407.html  | As I walked out in the streets of Laredo As I walked out in Laredo one day I spied a poor cowb...  |
-| Barbra Streisand | I Won't Last A Day Without You | /b/barbra+streisand/i+wont+last+a+day+without+you_20699679.html  | Day after day I must face a world of strangers Where I don't belong, I'm not that strong It's ...  |
+|-------|-----|-------|
+|Unwritten Law|Genocide| Well who are you what do you know And I guess it only goes to show Don't think you're ready for the fall Do you think you really wanta play.. |
+| Tori Amos | Butterfly | Stinky soul get a little lost in my own Hey General, need a little love in that hole of yours One ways, now, and..|
+| Glee | Dark Side | There's a place that I know It's not pretty there and few have ever gone If I show it to you now Will it make you run away.. |
+| John Denver | Downhill Stuff | Blue river blues I'd rather be outside Here I am inside Watching it rain Blue river blues I'd rather be somewhere.. | 
 
 ## 4. T5 학습 결과
 
