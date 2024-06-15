@@ -77,7 +77,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 |-------|-----|-------|
 |Unwritten Law|Genocide| Well who are you what do you know And I guess it only goes to show Don't think you're ready for the fall Do you think you really wanta play.. |
 | Tori Amos | Butterfly | Stinky soul get a little lost in my own Hey General, need a little love in that hole of yours One ways, now, and..|
-| Glee | Dark Side | There's a place that I know It's not pretty there and few have ever gone If I show it to you now Will it make you run away.. |
+| .. | .. | ... |
 | John Denver | Downhill Stuff | Blue river blues I'd rather be outside Here I am inside Watching it rain Blue river blues I'd rather be somewhere.. | 
 | Judy Garland | Why Was I Born? | Why was I born? Why am I livin'? What do I get? What am I givin'? Why do I want a thing I.. | 
 
