@@ -85,14 +85,16 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 원본 데이터셋의 link열은 삭제하였으며 song열의 이름을 summary로 변경하고 모델 학습의 효율성을 높이기 위해 3000개의 샘플을 랜덤으로 추출하여 새로운 데이터셋을 만들었고, 각 가사를 입력으로 받고, 해당하는 제목을 목표 출력으로 설정하여 모델을 학습하였다.
 
 ### 3.2 모델 학습
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/e3904690-c279-4f40-8073-24a27081a274"/>
 T5 모델은 텍스트를 입력받아 텍스트를 생성하는 다양한 작업에 적용할 수 있는 범용 모델이다. 이 모델을 노래 제목 예측에 맞게 미세 조정을 수행하였다.
 
 ## 4. T5 학습 결과
 ### 4.1 결과
-사전 훈련된 T5 모델을 사용하여 노래 가사를 기반으로 제목을 생성하도록 미세 조정을 수행했다.
 
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/f63abc24-fa1e-4ad4-abb2-1a51eaad9e73" width="800" height="250"/>
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/13279650-a668-491b-b9a6-99e6dbb8c95e" width="800" height="250"/>
+
+사전 훈련된 T5 모델을 사용하여 노래 가사를 기반으로 제목을 생성하도록 미세 조정을 수행했다.
 
 ### 4.2 모델 평가
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34"/>
