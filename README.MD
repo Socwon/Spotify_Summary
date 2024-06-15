@@ -69,6 +69,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 <img src="https://img.shields.io/badge/numpy-013243?style=flat-square&logo=numpy&logoColor=white"/>
 <img src="https://img.shields.io/badge/scikit-learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/>
 </div>
+<br>
 
 
 | artist | summary | text  | 
