@@ -91,11 +91,11 @@ T5 모델은 텍스트를 입력받아 텍스트를 생성하는 다양한 작�
 ### 4.1 결과
 사전 훈련된 T5 모델을 사용하여 노래 가사를 기반으로 제목을 생성하도록 미세 조정을 수행했다.
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/f63abc24-fa1e-4ad4-abb2-1a51eaad9e73"/>
-
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/9a3b6100-0347-4419-a75c-163f3d5d6496"/>
 
 ### 4.2 모델 평가
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34"/>
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/9a3b6100-0347-4419-a75c-163f3d5d6496"/>
+
 
 모델의 성능을 평가하기 위해 제목 길이 분포 히스토그램을 생성하였다. 모델이 생성한 제목의 단어 수 분포를 나타내는데 x축은 제목의 길이, y축은 해당 길이의 제목이 생성된 빈도수이다.
 대부분의 제목이 5~10 단어로 구성되어 있음을 알 수 있다. 그러나 특정 길이에서 제목의 빈도가 높다는 것은 모델이 특정 패턴의 제목을 선호한다는 것을 시사할 수 있다.
