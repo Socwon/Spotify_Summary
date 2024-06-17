@@ -101,7 +101,7 @@ ROUGE-1, ROUGE-2, ROUGE-L, ROUGE-Lsum 점수를 사용하여 ROUGE-1 점수는 0
 생성된 제목의 평균 길이는 5.6119 단어로, 대부분의 제목이 6단어 이하로 생성되었다.
 
 ### 4.2 모델 평가
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34"/>
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34" width="700" height="400"/>
 
 모델의 성능을 평가하기 위해 제목 길이 분포 히스토그램을 생성하였다. 모델이 생성한 제목의 단어 수 분포를 나타내는데 x축은 제목의 길이, y축은 해당 길이의 제목이 생성된 빈도수이다.
 대부분의 제목이 5~10 단어로 구성되어 있음을 알 수 있다. 그러나 특정 길이에서 제목의 빈도가 높다는 것은 모델이 특정 패턴의 제목을 선호한다는 것을 시사할 수 있다.
