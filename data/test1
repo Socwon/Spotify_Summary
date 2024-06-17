@@ -1,43 +1,61 @@
-import csv
-import random
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from tqdm import tqdm
+import matplotlib.pyplot as plt
 
-# 학습 데이터 파일 경로
-csv_file = 'spotify_millsongdata.csv'
+# 데이터셋 불러오기
+new_data = pd.read_csv('sampled_5000_songs.csv')
 
-# CSV 파일에서 데이터를 읽어오는 함수
-def read_csv(file):
-    data = []
-    with open(file, 'r', newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            data.append({'title': row['song'], 'lyrics': row['text']})
-    return data
+# 모델 및 토크나이저 로드
+model_checkpoint = "song_model/checkpoint-500"
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoint)
 
-# 데이터 로드
-song_data = read_csv(csv_file)
+# 예측 함수 정의
+def generate_title(model, tokenizer, input_text):
+    prefix = "summarize: "
+    inputs = tokenizer.encode(prefix + input_text, return_tensors="pt", max_length=1024, truncation=True)
+    outputs = model.generate(inputs, max_length=128, min_length=30, length_penalty=2.0, num_beams=4, early_stopping=True)
+    title = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return title
 
-# 랜덤하게 3000개의 샘플 추출
-random_sample = random.sample(song_data, 3000)
+# 결과 리스트
+output_list = []
 
-# 가사만 따로 추출하여 리스트에 저장
-lyrics_list = [song['lyrics'] for song in random_sample]
+# 예측 실행 및 결과 저장
+for idx, row in tqdm(new_data.iterrows(), total=len(new_data)):
+    input_text = row['text']
+    generated_title = generate_title(model, tokenizer, input_text)
+    output_list.append({
+        "샘플": idx + 1,
+        "입력 텍스트": input_text,
+        "생성된 제목": generated_title
+    })
 
-# CountVectorizer를 사용하여 가사를 벡터화
-vectorizer = CountVectorizer()
-vectorized_lyrics = vectorizer.fit_transform(lyrics_list)
+# DataFrame으로 저장
+results_df = pd.DataFrame(output_list)
+results_df.to_csv('results.csv', index=False)
 
-# 입력된 가사와 가장 유사한 노래 제목을 반환하는 함수
-def get_song_title(query_lyrics, random_sample, vectorizer, vectorized_lyrics):
-    query_vector = vectorizer.transform([query_lyrics])
-    cosine_similarities = cosine_similarity(vectorized_lyrics, query_vector)
-    most_similar_song_index = cosine_similarities.argmax()
-    return random_sample[most_similar_song_index]['title']
+# 결과 출력
+for output in output_list:
+    print(f"샘플 {output['샘플']}:\n")
+    print(f"입력 텍스트:\n{output['입력 텍스트']}\n")
+    print(f"생성된 제목:\n{output['생성된 제목']}\n")
+    print("=" * 50 + "\n")
 
-# 가사 입력 받기
-query_lyrics = input("가사를 입력하세요: ")
+# 히스토그램: 제목 길이 분포
+title_lengths = [len(title.split()) for title in results_df['생성된 제목']]
+plt.figure(figsize=(10, 6))
+plt.hist(title_lengths, bins=30, edgecolor='black')
+plt.title('제목 길이 분포')
+plt.xlabel('단어 수')
+plt.ylabel('빈도수')
+plt.show()
 
-# 가장 유사한 노래 제목 출력
-predicted_song_title = get_song_title(query_lyrics, random_sample, vectorizer, vectorized_lyrics)
-print("입력한 가사와 유사한 노래 제목은:", predicted_song_title)
+# ROUGE-1 점수 변화 그래프 (예시)
+plt.figure(figsize=(10, 6))
+plt.plot(results_df['샘플'], results_df['ROUGE-1 점수'], marker='o')
+plt.title('ROUGE-1 점수 변화')
+plt.xlabel('샘플 번호')
+plt.ylabel('ROUGE-1 점수')
+plt.show()
