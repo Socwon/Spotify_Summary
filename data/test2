@@ -1,0 +1,92 @@
+import pandas as pd
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+
+# 데이터셋 불러오기
+new_data = pd.read_csv('sampled_5000_songs.csv')
+
+# 모델 및 토크나이저 로드
+model_checkpoint = "song_model/checkpoint-500"
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoint)
+
+# 예측 함수 정의
+def generate_title(model, tokenizer, input_text):
+    prefix = "summarize: "
+    inputs = tokenizer.encode(prefix + input_text, return_tensors="pt", max_length=1024, truncation=True)
+    outputs = model.generate(inputs, max_length=128, min_length=30, length_penalty=2.0, num_beams=4, early_stopping=True)
+    title = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return title
+
+# 결과 리스트
+output_list = []
+
+# 예측 실행 및 결과 저장
+for idx, row in tqdm(new_data.iterrows(), total=len(new_data)):
+    input_text = row['text']
+    generated_title = generate_title(model, tokenizer, input_text)
+    output_list.append({
+        "샘플": idx + 1,
+        "입력 텍스트": input_text,
+        "생성된 제목": generated_title
+    })
+
+# DataFrame으로 저장
+results_df = pd.DataFrame(output_list)
+results_df.to_csv('results.csv', index=False)
+
+# 결과 출력
+for output in output_list:
+    print(f"샘플 {output['샘플']}:\n")
+    print(f"입력 텍스트:\n{output['입력 텍스트']}\n")
+    print(f"생성된 제목:\n{output['생성된 제목']}\n")
+    print("=" * 50 + "\n")
+
+# 히스토그램: 제목 길이 분포
+title_lengths = [len(title.split()) for title in results_df['생성된 제목']]
+plt.figure(figsize=(10, 6))
+plt.hist(title_lengths, bins=30, edgecolor='black')
+plt.title('제목 길이 분포')
+plt.xlabel('단어 수')
+plt.ylabel('빈도수')
+plt.savefig('title_length_distribution.png')
+plt.show()
+
+# 학습 결과 기록
+training_results = {
+    'eval_loss': 1.6958894729614258,
+    'eval_rouge1': 0.4233,
+    'eval_rouge2': 0.2993,
+    'eval_rougeL': 0.424,
+    'eval_rougeLsum': 0.4256,
+    'eval_gen_len': 5.6119,
+    'eval_runtime': 388.3712,
+    'eval_samples_per_second': 1.38,
+    'eval_steps_per_second': 0.088,
+    'epoch': 4.0,
+    'train_runtime': 10318.049,
+    'train_samples_per_second': 0.83,
+    'train_steps_per_second': 0.052,
+    'train_loss': 2.307663447821318,
+}
+
+# 학습 결과 출력
+print("\n=== 학습 결과 ===")
+for key, value in training_results.items():
+    print(f"{key}: {value}")
+
+# 학습 결과 DataFrame으로 저장
+training_results_df = pd.DataFrame(list(training_results.items()), columns=['Metric', 'Value'])
+training_results_df.to_csv('training_results.csv', index=False)
+
+# 학습 결과 그래프 출력 (예시로 학습 손실과 평가 손실)
+plt.figure(figsize=(10, 6))
+plt.plot(training_results_df['Metric'], training_results_df['Value'], marker='o')
+plt.title('Training and Evaluation Results')
+plt.xlabel('Metric')
+plt.ylabel('Value')
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.savefig('training_evaluation_results.png')
+plt.show()
