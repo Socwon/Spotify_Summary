@@ -100,7 +100,7 @@ Spotify Million Song Dataset는 스포티파이라는 음악 앱의 노래 이�
 ROUGE-1, ROUGE-2, ROUGE-L, ROUGE-Lsum 점수를 사용하여 ROUGE-1 점수는 0.4233, ROUGE-2 점수는 0.2993, ROUGE-L 점수는 0.424, ROUGE-Lsum 점수는 0.4256으로, 모델이 입력된 노래 가사에서 비교적 일관성 있게 제목을 생성하는 능력을 보여주었다.
 생성된 제목의 평균 길이는 5.6119 단어로, 대부분의 제목이 6단어 이하로 생성되었다.
 
-<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/721ad448-900b-42dd-a9f8-b1aa3e7eb200" />
+<img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/721ad448-900b-42dd-a9f8-b1aa3e7eb200" width="300" height="800"/>
 
 ### 4.2 모델 평가
 <img src="https://github.com/Socwon/Spotify_Summary/assets/101037584/af3d0315-2796-4d18-bd32-8e025d8f8f34" width="700" height="400"/>
