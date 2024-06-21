@@ -1,0 +1,23 @@
+import pandas as pd
+
+# 데이터셋 파일명
+file_name = "spotify_millsongdata.csv"
+
+# CSV 파일을 pandas DataFrame으로 읽어오기
+df = pd.read_csv(file_name)
+
+# link 열 제거하기
+df = df.drop(columns=['link'])
+
+# song 열 이름을 summary로 변경하기
+df = df.rename(columns={'song': 'summary'})
+
+# 랜덤으로 5000개의 데이터 추출하기
+df_sample = df.sample(n=5000, random_state=1)  # random_state를 사용해 재현성을 유지할 수 있어요.
+
+# 새로운 파일명
+output_file = "sampled_5000_songs.csv"
+
+# 수정된 데이터를 새로운 CSV 파일로 저장하기
+df_sample.to_csv(output_file, index=False)
+
